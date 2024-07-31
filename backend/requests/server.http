@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:5000/authors
+
+###
+GET {{baseUrl}}
+###
+GET {{baseUrl}}/123
+###
+POST {{baseUrl}}
+//Content-Type: "application/json"
+###
+PUT {{baseUrl}}/123
+###
+DELETE {{baseUrl}}/123
