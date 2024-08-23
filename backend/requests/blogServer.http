@@ -1,0 +1,33 @@
+@baseUrl=http://localhost:5000/blogPosts
+
+### RITORNA LA LISTA DEI POSTSBLOG
+GET {{baseUrl}}
+###
+GET {{baseUrl}}?page=5&perPage=5
+### RITORNA IL SINGOLO POSTBLOG
+GET {{baseUrl}}/66acfa5421bf7d364dd20d25
+
+### RITORNA IL PRIMO RISULTATO NELLA RICERCA DEL TITOLO
+GET {{baseUrl}}?title=dUe
+
+### CREA UN NUOVO POSTBLOG
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "category":"Categoria 2",
+    "title":"PostBlog di giuseppe rossi",
+    "cover": "https://picsum.photos/1000/300",
+    "readTime":500,
+    "author":"66ad2c47cdac3f5495b31304",
+    "content": "Il mio post"
+}
+### MODIFICA UN POSTBLOG CON ID ASSOCIATO
+PUT {{baseUrl}}/66acfa5421bf7d364dd20d24
+Content-Type: application/json
+
+{
+  "author":"Mario Rossi"
+}
+### CANCELLA UN POSTBLOG CON ID ASSOCIATO
+DELETE {{baseUrl}}/66ad1424543ffbc8f242bde0

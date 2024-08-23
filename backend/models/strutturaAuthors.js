@@ -1,4 +1,5 @@
 import { model, Schema } from "mongoose"
+
 const authorsSchema = new Schema(
 {
     name: {
@@ -24,4 +25,5 @@ const authorsSchema = new Schema(
 },
 {collection : "authors"}
 )
+
 export default model ("Author", authorsSchema)
