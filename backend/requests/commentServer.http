@@ -1,0 +1,32 @@
+@baseUrl= http://localhost:5000/posts
+
+
+###
+
+GET {{baseUrl}}/66bf209a22b7a3dd39753525/comments
+
+###
+
+GET {{baseUrl}}/66bf209a22b7a3dd39753525/comments/66cd9c2d8eb4d076b7fe54b1
+
+###
+
+POST {{baseUrl}}/66bf209a22b7a3dd39753525/comments
+Content-Type: application/json
+ 
+{
+    "content": "new comment 2"
+} 
+
+###
+
+PUT {{baseUrl}}/66bf209a22b7a3dd39753525/comment/66cd9c2d8eb4d076b7fe54b1
+Content-Type: application/json
+ 
+{
+    "content": "change comment"
+} 
+
+###
+
+DELETE {{baseUrl}}/66bf209a22b7a3dd39753525/comment/66ce04c8862b5218eaae9e00

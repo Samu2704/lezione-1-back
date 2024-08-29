@@ -5,6 +5,7 @@ import authorRoutes from "./routes/authorRoutes.js"
 import blogRoutes from "./routes/blogRoutes.js"
 import cors from "cors"
 
+
 const port= process.env.PORT || 5000
 const server = express()
 server.use(express.json())
