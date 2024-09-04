@@ -1,0 +1,26 @@
+@baseUrl= http://localhost:5000/api/v1
+
+###
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+    "name":"samueeeeee",
+    "email":"samu@samu.samueeeee",
+    "password":"ciaoeee"
+
+}
+
+###
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email":"samu@samu.samu",
+    "password":"ciao"
+
+}
+
+###
+GET {{baseUrl}}/me
+Authorization: Bearer 

@@ -6,6 +6,7 @@ import { createComment, deleteComment, editComment, getComments, getSingleCommen
 
 const router = express.Router()
 
+
 router.get('/', getPost)
 router.get('/:id', getSinglePost)
 router.post ('/',  uploadCloudinary.single('cover'), addPost )

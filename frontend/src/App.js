@@ -5,14 +5,16 @@ import Home from "./views/home/Home";
 import Blog from "./views/blog/Blog";
 import NewBlogPost from "./views/new/New";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { loadAuthors } from "./data/fetch";
+import { loadAuthors, loadPosts } from "./data/fetch";
+import AuthorContextProvider from "./context/AuthorContextProvider"
 
 function App() {
   useEffect(() =>{
-loadAuthors().then((data)=>console.log(data))
+loadPosts().then((data)=>console.log(data))
   },[])
   
   return (
+    <AuthorContextProvider>
     <Router>
       <NavBar />
       <Routes>
@@ -22,6 +24,7 @@ loadAuthors().then((data)=>console.log(data))
       </Routes>
       <Footer />
     </Router>
+    </AuthorContextProvider>
   );
 }
 

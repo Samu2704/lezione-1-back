@@ -1,6 +1,6 @@
 import strutturaComment from "../models/strutturaComment.js";
 import strutturaBlog from "../models/strutturaBlog.js";
-import strutturaAuthor from "..models/strutturaAuthor.js"
+import strutturaAuthors from "../models/strutturaAuthors.js"
 import EmailTransport from "../services/mailService.js";
 
 
