@@ -50,5 +50,5 @@ return res.send(req.loggedUser)
 
 export const callbackGoogle = (req, res) =>{
 //qui facciamo il redirect al frontend passandogli il jwt creato in passport
-res.redirect(`http://localhost:3000/login?token=${req.user.jwtToken}`)
+res.redirect(`${process.env.FRONTEND_URL}/login?token=${req.user.jwtToken}`)
 }
