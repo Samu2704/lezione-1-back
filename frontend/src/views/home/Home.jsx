@@ -72,7 +72,7 @@ const Home = props => {
           <Button variant="primary" onClick={handleLogin}>
             login now
           </Button>
-          <a href="http://localhost/5000/api/v1/login-google" className="btn btn-primary">login with google nuovo</a>
+          <a href={`${process.env.REACT_APP_API_URL}/api/v1/login-google`} className="btn btn-primary">login with google nuovo</a>
           <Button  variant="primary" type="button" onClick={handleLogin}>
             login with Google
           </Button>

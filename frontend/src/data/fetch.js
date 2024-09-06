@@ -8,7 +8,7 @@
 // }
 
 export const loadPosts = async () =>{
-    const res = await fetch ('http://localhost:5000/posts')
+    const res = await fetch ( `${process.env.REACT_APP_API_URL}/posts `)
     const data = await res.json();
     return data
 }
@@ -21,7 +21,7 @@ export const newPost = async (formValue,cover) =>{
     formData.append('readTime', JSON.stringify(formValue.readTime))
     formData.append('author', formValue.author)
     formData.append('content', formValue.content)
-    const res= await fetch ('http://localhost:5000/posts', {
+    const res= await fetch (`${process.env.REACT_APP_API_URL}/posts`, {
         
         method: "POST",
         body: formData
@@ -32,7 +32,7 @@ export const newPost = async (formValue,cover) =>{
 } 
 
 export const login = async (formValue) => {
-    const res = await fetch('http://localhost:5000/api/v1/login', {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/login`, {
         headers: {
             "Content-Type": "application/json",
         },
@@ -44,7 +44,7 @@ export const login = async (formValue) => {
 }
 
 export const me = async() =>{
-    const res = await fetch('http://localhost:5000/api/v1/me',{
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/me`,{
         headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
         }
@@ -63,7 +63,7 @@ export const register = async (regFormValue, avatar) => {
     formData.append('password', regFormValue.password)
     console.log(formData)
     try {
-        const res = await fetch('http://localhost:5000/api/v1/register', {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/register`, {
             // headers: {
             //     "Content-Type": "application/json"
             // },
